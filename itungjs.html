@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Tanah</label>
+    <input type="number" id="tanah" min="1" max="5" required><br>
+    <label>Sumber Air</label>
+    <input type="number" id="air" min="1" max="5" required><br>
+    <label>Ketinggian</label>
+    <input type="number" id="tinggi" min="1" max="5" required><br>
+    <label>Intensitas Cahaya</label>
+    <input type="number" id="cahaya" min="1" max="5" required><br>
+    <label>Hewan Liar</label>
+    <input type="number" id="Hewan" min="1" max="5" required><br>
+
+    <button id="cek">Cek</button><br>
+    <label id="hasil">-</label>
+
+    <script>
+        document.getElementById("cek").onclick = function() {perhitungan()};
+
+        function perhitungan(){
+            var t = document.getElementById("tanah").value;
+            var a = document.getElementById("air").value;
+            var k = document.getElementById("tinggi").value;
+            var c = document.getElementById("cahaya").value;
+            var l = document.getElementById("Hewan").value;
+
+            var tampung = Number(t) + Number(a) + Number(k) + Number(c) + Number(l);
+
+            if (tampung== 20) {
+                grade = "Jahe";
+            }else if(tampung >= 15){
+                grade = "temu lawak banget";
+            }else if(tampung >= 10){
+                grade = "wakwak";
+            }else{
+                grade = " hahay";
+            }
+
+            document.getElementById("hasil").innerHTML = grade;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-rekomen.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="shortcut icon" href="img/fav-icn.svg" type="image/x-icon">
+    <!--CB-modal -->
+    <!-- Button trigger modal -->
+    <title>Rekomendasi</title>
+</head>
+
+<body>
+    <div class="jumbotron text-center bg" style="background-color: #3498DB;">
+        <div class="container isijumbotron">
+            <h1 class="jumbotron-heading"><i>Panduan Penggunaan</i></h1>
+            <p>Isilah beberapa pertanyaan dibawah agar mesin rekomendasi dari spices space dapat berfungsi dengan baik. 
+                Semakin akurat data yang anda masukan, semakin akurat juga mesin rekomendasi kami bekerja. Selamat mencoba!!</p>
+        </div>
+    </div>
+        <div class="card" style="width: 80%;">
+            <div class="card-body text-center">
+                <h2 class="card-title">Pertanyaan Dataran</h2>
+                <p class="card-text">Bagaimana ketinggian dataran pada lahan yang anda miliki. <br>
+                    Jika kurang dari sama dengan 700 mdpl maka pilih Dataran Rendah. <br>
+                    Jika lebih dari 700 mdpl maka pilih Dataran Tinggi.</p>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Masukan Nilai</label>
+                    <select class="form-control" id="dataran">
+                        <option>== Pilih Disini ==</option>
+                        <option value="tinggi">Tinggi</option>
+                        <option value="rendah">Rendah</option>
+                    </select>    
+                </div>
+            </div>
+        </div>
+        <div class="card card2" style="width: 80%;">
+            <div class="card-body text-center">
+                <h2 class="card-title">Pertanyaan Suhu</h2>
+                <p class="card-text">Bagaimana kondisi temperatur pada lingkungan disekitar lahan yang anda miliki. <br>
+                    Jika temperatur udara diantara 17 sampai 25 derajat celcius maka pilih dingin. <br>
+                    Jika temperatur udara lebih dari sama dengan 26 maka pilih panas.
+                </p>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Masukan Nilai</label>
+                    <select class="form-control" id="suhu">
+                        <option>== Pilih Disini ==</option>
+                        <option value="panas">Panas</option>
+                        <option value="dingin">Dingin</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="card card2" style="width: 80%;">
+            <div class="card-body text-center">
+                <h2 class="card-title">Pertanyaan Curah Hujan</h2>
+                <p class="card-text">Bagaimana kondisi curah hujan pada lingkungan disekitar lahan yang anda miliki. <br>
+                    Jika curah hujan kurang dari sama dengan 1600 mm per bulan maka pilih Sedang. <br>
+                    Jika lebih dari 1600 mm per bulan maka pilih tinggi. 
+                </p>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Masukan Nilai</label>
+                    <select class="form-control" id="hujan">
+                        <option>== Pilih Disini ==</option>
+                        <option value="sedang">Sedang</option>
+                        <option value="tinggih">Tinggi</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="card card2" style="width: 80%;">
+            <div class="card-body text-center">
+                <h2 class="card-title">Pertanyaan Jenis Tanah</h2>
+                <p class="card-text">Bagaimana kondisi jenis tanah pada lahan yang anda miliki. <br>
+                    Jika tanah bertekstur pasir atau pasir berlempung maka pilih Kasar. <br>
+                    Jika tanah berstektur liat berpasir, liat, atau liat berdebu maka pilih Lembut.
+                </p>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Masukan Nilai</label>
+                    <select class="form-control" id="tanah">
+                        <option>== Pilih Disini ==</option>
+                        <option value="lembut">Lembut</option>
+                        <option value="kasar">Kasar</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="card card2" style="width: 80%;">
+            <div class="card-body text-center">
+                <h2 class="card-title">Pertanyaan Ph Tanah</h2>
+                <p class="card-text">Bagaimana kondisi PH tanah pada lahan yang anda miliki. <br>
+                    Jika PH tanah kurang dari 6 maka pilih PH Asam. <br>
+                    Jika PH tanah diantara 6.1 - 7.8 maka pilih PH Netral. <br>
+                    Jika PH tanah lebih dari 7.8 maka pilih PH Basa.
+                </p>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Masukan Nilai</label>
+                    <select class="form-control" id="ph">
+                        <option>== Pilih Disini ==</option>
+                        <option value="asam">Asam</option>
+                        <option value="basa">Basa</option>
+                        <option value="netral">Netral</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top: 2%;">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick='hitung()'>
+                Cari Tahu
+            </button>
+        </div>
+    <div class="text-center" style="margin-top: 1%;">
+        <a href="index.php" type="button" class="btn btn-danger my-2">Kembali</a>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Hasil</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="hasilhitung" class="modal-body text-center">
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <a href="belajar.php" type="button" class="btn btn-primary">Mulai Belajar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS code -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function hitung() {
+            var hasilhitung = document.getElementById('hasilhitung');
+
+            var dataran = document.getElementById('dataran').value;
+            var suhu = document.getElementById('suhu').value;
+            var hujan = document.getElementById('hujan').value;
+            var tanah = document.getElementById('tanah').value;
+            var ph = document.getElementById('ph').value;
+
+            if (dataran == 'tinggi') {
+                if (suhu == 'panas') {
+                    if (hujan == 'sedang') {
+                        if (tanah == 'lembut') {
+                            if (ph == 'asam') {
+                                hasil = "Jagung, " + "Tembakau, " + "Kedelai";
+                                // "tinggi panas sedang lembut asam" +
+                            } else if (ph == 'basa') {
+                                hasil = "Tidak ada tanaman yang cocok";
+                                // "tinggi panas sedang lembut basa"
+                            } else /* ph netral*/ {
+                                hasil = "Jagung, " + " Tembakau, " + "Kedelai, "+ "Cabai";
+                                // "tinggi panas sedang lembut netral" +
+                            }
+                            
+                        } else /* tanah kasar*/ {
+                            if (ph == 'asam') {
+                                hasil = " Jagung, " + "Tembakau, " + "Kedelai";
+                                // "tinggi panas sedang kasar asam"+ 
+                            } else if (ph == 'basa') {
+                                hasil = "Tidak ada tanaman yang cocok";
+                                // "tinggi panas sedang kasar basa"
+                            } else /* ph netral*/ {
+                                hasil = "Jagung, " + "Tembakau, " + "Kedelai, "+ "Cabai";
+                                // "tinggi panas sedang kasar netral"+ 
+                            }
+                           
+                        }
+                            
+                    } else /*hujan tinggi*/{
+                        if (tanah == 'lembut') {
+                            if (ph == 'asam') {
+                                hasil = " Gembili, " + "Jagung, " + "Tembakau";
+                                // "tinggi panas tinggi lembut asam" + 
+                            } else if (ph == 'basa') {
+                                hasil = "Tidak ada tanaman yang cocok";
+                                // "tinggi panas tinggi lembut basa"
+                            } else /* ph netral*/ {
+                                hasil = " Jagung, " + "Tembakau";
+                                // "tinggi panas tinggi lembut netral" +
+                            }
+                            
+                        } else /* tanah kasar*/ {
+                            if (ph == 'asam') {
+                                hasil = "Jagung, " + "Tembakau";
+                                // "tinggi panas tinggi kasar asam" + 
+                            } else if (ph == 'basa') {
+                                hasil = "Tidak ada tanaman yang cocok";
+                                // "tinggi panas tinggi kasar basa"
+                            } else /* ph netral*/ {
+                                hasil = "Jagung," + " Tembakau";
+                                // "tinggi panas tinggi kasar netral" + 
+                            }
+                        }        
+                    }
+                        
+                } else /*suhu dingin*/ {
+                    if (hujan == 'sedang') {
+                        if (tanah == 'lembut') {
+                            if (ph == 'asam') {
+                                hasil = "Jahe, " + "Kentang," + " Jagung," + " Tembakau," + " Kedelai";
+                                // "tinggi dingin sedang lembut asam" + 
+                            } else if (ph == 'basa') {
+                                hasil = "Tidak ada tanaman yang cocok";
+                                // "tinggi dingin sedang lembut basa"
+                            } else /* ph netral*/ {
+                                hasil = " Jahe," + "Kentang," + " Jagung," + " Tembakau," + " Kedelai,"+ " Cabai";
+                                // "tinggi dingin sedang lembut netral" + 
+                            }
+                            
+                        } else /* tanah kasar*/ {
+                            if (ph == 'asam') {
+                                hasil = "Jagung," + " Tembakau," + " Kedelai";
+                                // "tinggi dingin sedang kasar asam" + 
+                            } else if (ph == 'basa') {
+                                hasil = "Tidak ada tanaman yang cocok";
+                                // "tinggi dingin sedang kasar basa"
+                            } else /* ph netral*/ {
+                                hasil = "Jagung," + " Tembakau," + " Kedelai,"+ " Cabai";
+                                // "tinggi dingin sedang kasar netral" + 
+                            }
+                        }    
+                    } else /*hujan tinggi*/{
+                        if (tanah == 'lembut') {
+                            if (ph == 'asam') {
+                                hasil = "Singkong," + " Gembili," + " Jagung," + " Tembakau";
+                                // "tinggi dingin tinggi lembut asam" + 
+                            } else if (ph == 'basa') {
+                                hasil = "Tidak ada tanaman yang cocok";
+                                // "tinggi dingin tinggi lembut basa"
+                            } else /* ph netral*/ {
+                                hasil = "Jagung," + " Tembakau";
+                                // "tinggi dingin tinggi lembut netal" + 
+                            }
+                            
+                        } else /* tanah kasar*/ {
+                            if (ph == 'asam') {
+                                hasil = "Jagung," + " Tembakau";
+                                // "tinggi dingin tinggi kasar asam" + 
+                            } else if (ph == 'basa') {
+                                hasil = "Tidak ada tanaman yang cocok";
+                                // "tinggi dingin tinggi kasar basa"
+                            } else /* ph netral*/ {
+                                hasil = "Jagung," + " Tembakau";
+                                // "tinggi dingin tinggi kasar netral" + 
+                            }
+                            
+                        }          
+                    }
+                }
+            } else /*dataran rendah*/ {
+                if (suhu == 'panas') {
+                    if (hujan == 'sedang') {
+                        if (tanah == 'lembut') {
+                            if (ph == 'asam') {
+                                hasil = ",Kacang Hijau," + " Jahe," + " Jagung," + " Tembakau," + " Kedelai";
+                                // "rendah panas sedang lembut asam" + 
+                            } else if (ph == 'basa') {
+                                hasil = "Tidak ada tanaman yang cocok";
+                                // "rendah panas sedang lembut basa"
+                            } else /* ph netral*/ {
+                                hasil = "Kacang Panjang," + " Jahe," + " Jagung," + " Tembakau," + " Kedelai," + "Kacang Tanah,"+ " Cabai";
+                                // "rendah panas sedang lembut netral" + 
+                            }
+                            
+                        } else /* tanah kasar*/ {
+                            if (ph == 'asam') {
+                                hasil = "Jagung," + " Tembakau," + " Kedelai";
+                                // "rendah panas sedang kasar asam" + 
+                            } else if (ph == 'basa') {
+                                hasil = "Tidak ada tanaman yang cocok";
+                                // "rendah panas sedang kasar basa"
+                            } else /* ph netral*/ {
+                                hasil = "Jagung," + " Tembakau," + " Kedelai," + " Kacang Tanah,"+ " Cabai";
+                                // "rendah panas sedang kasar netral" + 
+                            }
+                           
+                        }
+                            
+                    } else /*hujan tinggi*/{
+                        if (tanah == 'lembut') {
+                            if (ph == 'asam') {
+                                hasil = "Jagung," + " Tembakau";
+                                // "rendah panas tinggi lembut asam" + 
+                            } else if (ph == 'basa') {
+                                hasil = "Tidak ada tanaman yang cocok";
+                                // "rendah panas tinggi lembut basa"
+                            } else /* ph netral*/ {
+                                hasil = "Kacang Panjang," + " Jahe," + " Jagung," + " Tembakau";
+                                // "rendah panas tinggi lembut netral" + 
+                            }
+                            
+                        } else /* tanah kasar*/ {
+                            if (ph == 'asam') {
+                                hasil = "Jagung," + " Tembakau";
+                                // "rendah panas tinggi kasar asam" + 
+                            } else if (ph == 'basa') {
+                                hasil = "Tidak ada tanaman yang cocok";
+                                // "rendah panas tinggi kasar basa"
+                            } else /* ph netral*/ {
+                                hasil = "Jagung," + " Tembakau";
+                                // "rendah panas tinggi kasar netral" + 
+                            }
+                        }        
+                    }
+                        
+                } else /*suhu dingin*/ {
+                    if (hujan == 'sedang') {
+                        if (tanah == 'lembut') {
+                            if (ph == 'asam') {
+                                hasil = "Kacang Hijau," + " Kacang Panjang," + " Jahe," + " Jagung," + " Tembakau," + " Kedelai";
+                                // "rendah dingin sedang lembut asam" + 
+                            } else if (ph == 'basa') {
+                                hasil = "Tidak ada tanaman yang cocok";
+                                // "rendah dingin sedang lembut basa"
+                            } else /* ph netral*/ {
+                                hasil = "Kacang Panjang," + " Jahe," + " Jagung," + " Tembakau," + " Kedelai,"+ " Cabai";
+                                // "rendah dingin sedang lembut netral" + 
+                            }
+                            
+                        } else /* tanah kasar*/ {
+                            if (ph == 'asam') {
+                                hasil = "Jagung," + " Tembakau," + " Kedelai";
+                                // "rendah dingin sedang kasar asam" + 
+                            } else if (ph == 'basa') {
+                                hasil = "Tidak ada tanaman yang cocok";
+                                // "rendah dingin sedang kasar basa"
+                            } else /* ph netral*/ {
+                                hasil = "Jagung," + " Tembakau," + " Kedelai," + " Cabai";
+                                // "rendah dingin sedang kasar netral" + 
+                            }
+                        }    
+                    } else /*hujan tinggi*/{
+                        if (tanah == 'lembut') {
+                            if (ph == 'asam') {
+                                hasil = "Singkong," + " Jagung," + " Tembakau";
+                                // "rendah dingin tinggi lembut asam" + 
+                            } else if (ph == 'basa') {
+                                hasil = "Tidak ada tanaman yang cocok";
+                                // "rendah dingin tinggi lembut basa"
+                            } else /* ph netral*/ {
+                                hasil = "Jahe," + " Jagung," + " Tembakau";
+                                // "rendah dingin tinggi lembut netal" 
+                            }
+                            
+                        } else /* tanah kasar*/ {
+                            if (ph == 'asam') {
+                                hasil = "Jagung," + " Tembakau";
+                                // "rendah dingin tinggi kasar asam" + 
+                            } else if (ph == 'basa') {
+                                hasil = "Tidak ada tanaman yang cocok";
+                                // "rendah dingin tinggi kasar basa"
+                            } else /* ph netral*/ {
+                                hasil = "Jagung," + " Tembakau";
+                                // "rendah dingin tinggi kasar netral" + 
+                            }
+                            
+                        }          
+                    }
+                }
+            }
+
+            hasilhitung.innerText = hasil;
+
+            //hasilhitung.innerText = dataran + suhu + hujan + tanah + ph;
+
+            
+        }
+    </script>
+    <!--JS below-->
+
+
+</body>
+
+</html>

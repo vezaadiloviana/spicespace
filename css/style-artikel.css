@@ -1,0 +1,18 @@
+.jumbotron{
+    color: white;
+}
+
+.card{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.card2{
+    margin-top: 3%;
+}
+
+.card-text{
+    text-indent: 5em;
+    line-height: 2em;
+
+}
